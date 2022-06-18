@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+   <html>
+	<head>
+	  <meta charset="utf-8">
+	<title>Colspan and Rowspan</title>
+	<style>
+	html {
+	font-family: Monospace;
+	}
+	body {
+	background-color: #B0E0E6;
+	}
+	table {
+	border: 3px outset black;
+	border-collapse: collapse;
+	margin-right: auto;
+	margin-left: auto;
+	width: 300px;
+	height: 400px;
+	}
+	th {
+	border: 2px solid blue;
+	background-color:#000000;
+	color: #F0FFFF;
+	}
+	td {
+	border: 2px solid blue;
+	background-color:#F0FFFF;
+	color: #000000;
+	}
+	tr, td, th, table{
+	border:2px solid blue;
+	text-align: center;
+	}
+	h1{
+	padding: 20px;
+	text-align: center;
+	}
+	</style>
+	</head>
+	<body>
+	<h1 align="center" >This is the table presented in Module 3.</h1>
+	   <table align="center">
+	   <tr colspan="2">
+	   <th>Animals</th>
+	   </tr>
+	   <tr>
+	   <th>Hippopotamus</th>
+	   </tr>
+	   <tr>
+	   <th>Horse</th>
+	   <td>Mare</td>
+	   </tr>
+	   <tr>
+	   <td>Stallion</td>
+	   </tr>
+	   <tr>
+	   <th>Crocodile</th>
+	   </tr>
+	   <tr>
+	   <th>Chicken</th>
+	   <td>Hen</td>
+	   </tr>
+	   <tr>
+	   <td>Rooster</td>
+	   </tr>
+	   </table>
+	<h1 align="center" >This is the table rearranged in Module 3.</h1>
+	   <table align="center">
+	   <tr>
+	   <th colspan="2">Animals</th>
+	   </tr>
+	   <tr>
+	   <th colspan="2">Hippopotamus</th>
+	   </tr>
+	   <tr>
+	   <th rowspan="2">Horse</th>
+	   <td>Mare</td>
+	   </tr>
+	   <tr>
+	   <td>Stallion</td>
+	   </tr>
+	   <tr>
+	   <th colspan="2">Crocodile</th>
+	   </tr>
+	   <tr>
+	   <th rowspan="2">Chicken</th>
+	   <td>Hen</td>
+	   </tr>
+	   <tr>
+	   <td>Rooster</td>
+	   </tr>
+	   </table>
+        <br><a href="main" style="active"><b>Back to Main Page</b></a>
+	</body>
+   </html>
