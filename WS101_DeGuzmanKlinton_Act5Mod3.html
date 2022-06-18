@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <meta charset="utf-8">
+ <title>Activity 5 in Module 3: HTML Form</title>
+ </head>
+ <body>
+ <h2 align="center">HTML Checkout Form (Activity 5) in Module 3.</h2>
+ <script type="text/javascript">
+    function first(){
+        var a = parseInt(document.getElementById("a_1").value);
+	var fsubtotal = document.getElementById("fsubtotal");
+        fsubtotal.value = a * 5;
+    }
+    function second(){
+        var a = parseInt(document.getElementById("a_2").value);
+	var ssubtotal = document.getElementById("ssubtotal");
+        ssubtotal.value = a * 10;
+    }
+    function third(){
+        var a = parseInt(document.getElementById("a_3").value);
+	var tsubtotal = document.getElementById("tsubtotal");
+        tsubtotal.value = a * 15;
+    }
+    function fourth(){
+        var a = parseInt(document.getElementById("a_4").value);
+	var fosubtotal = document.getElementById("fosubtotal");
+        fosubtotal.value = a * 20;
+    }
+    function fifth(){
+        var a = parseInt(document.getElementById("a_5").value);
+	var fisubtotal = document.getElementById("fisubtotal");
+        fisubtotal.value = a * 30;
+    }
+    function total(){
+	var subtotal1 = parseInt(document.getElementById("fsubtotal").value);
+	var subtotal2 = parseInt(document.getElementById("ssubtotal").value);
+	var subtotal3 = parseInt(document.getElementById("tsubtotal").value);
+	var subtotal4 = parseInt(document.getElementById("fosubtotal").value);
+	var subtotal5 = parseInt(document.getElementById("fisubtotal").value);
+	var total = document.getElementById("Total");
+	total.value = subtotal1 + subtotal2 + subtotal3 + subtotal4 + subtotal5;
+	} 
+ </script>
+	<style>
+	html {
+	font-family: sans-serif;
+	th {
+	border: 1px solid black;
+	background-color:#D0D3D4;
+	}
+	fieldset{
+  	border: 1px solid rgb(255,232,57);
+  	width: 250px;
+	text-align: center;
+	background color: #eeeeee;
+	}
+	tr, td, th, table{
+	border:1px solid black;
+	}
+	label{
+	display: inline-block; 
+	width: 90%; 
+	text-align: right;
+	}
+	textarea {
+	overflow-y: scroll;
+	overflow: auto;
+    	padding-bottom: 200px;
+	}
+	</style>
+ <form action="" method="">
+ <center>
+ <fieldset class="field" style="width: 650px">
+  <div align="left">
+  <table>
+   <tr>
+   <td align="right">
+   <label align="right" for="fname">Name:</label></td>
+   <td>
+   <input type="text" id="full name" name="full name" placeholder="Walaa Brody" size="35"></td>
+   </tr>
+   <tr>
+   <td align="right">
+   <labe for="email">Email:</label></td>
+   <td>
+   <input type="text" id="email" name="email" placeholder="w.brody@widget-sales.com" size="35"></td>
+   </tr>
+   <tr>
+   <td align="right">
+   <label for="address">Address:</label>
+   </td>
+   <td>
+   <textarea name="address" cols="35" rows="5" style="overflow-y: scroll;" placeholder="162 Main Road                                Rondebosch                              Cape Town"></textarea></td>
+   </tr>
+   <tr>
+   <td align="right">
+   <label for="postcode">Postcode:</label></td>
+   <td>
+   <input type="text" id="postcode" name="postcode" placeholder="7700"></td>
+   </tr>
+   </table>
+   </div>
+   <br>
+   <br>
+   <br>
+   <table border="1">
+	<tr> <th id="product" align="left">Product</th> <th id="product">Part Number</th> <th id="product" align="left">Quantity</th> <th id="price">Unit Price</th> <th id="subtotal" align="left">Subtotal</th> </tr>
+	<tr> <td>EconoBox</td> <td>LB100</td> <td><input type="text" id="a_1" maxlength="5" size="5" placeholder="3"></td> <td>₱5</td> <td>₱<input type="text" id="fsubtotal" READONLY maxlength="13" size="11" placeholder="15"></td> <td><input type="button" value ="Calculate" onClick="javascript:first()"></td></tr>
+	<tr> <td>Standard Box</td> <td>LB200</td> <td><input type="text" id="a_2" maxlength="5" size="5" placeholder="4"></td> <td>₱10</td> <td>₱<input type="text" id="ssubtotal" READONLY maxlength="13" size="11" placeholder="40"></td> <td><input type="button" value ="Calculate" onClick="javascript:second()"></td></tr>
+	<tr> <td>Premium Box/TD></td> <td>LB300</td> <td><input type="text" id="a_3" maxlength="5" size="5" placeholder="1"></td> <td>₱15</td> <td>₱<input type="text" id="tsubtotal" READONLY maxlength="13" size="11" placeholder="15"></td> <td><input type="button" value ="Calculate" onClick="javascript:third()"></td></tr>
+	<tr> <td>Deluxe Box/TD></td> <td>LB400</td> <td><input type="text" id="a_4" maxlength="5" size="5" placeholder="0"></td> <td>₱20</td> <td>₱<input type="text" id="fosubtotal" READONLY maxlength="13" size="11"></td> <td><input type="button" value="Calculate" onClick="javascript:fourth()"></td></tr>
+	<tr> <td>Super Deluxe Box/TD></td> <td>LB500</td> <td><input type="text" id="a_5" maxlength="5" size="5" placeholder="1"></td> <td>₱30</td> <td>₱<input type="text" id="fisubtotal" READONLY maxlength="13" size="11" placeholder="30"></td> <td><input type ="button" value="Calculate" onClick="javascript:fifth()"></td></tr>
+	<tr> <td colspan="4" rowspan="1" align="right">Total:</td> <td>₱<input type="text" id="Total" READONLY maxlength="13" size="11" placeholder="100"></td> <td><input type="button" value="Calculate" onClick="javascript:total()"></td></tr>
+   </table>
+   <br>
+   <br>
+   <br>
+   <br>
+   <div align="left">
+   <table>
+	<tr> <th align="left">Credit Card Details</th> <td></td> <td></td></tr>
+	<tr> <td aligh="left">&nbsp;Card Type:</td> <td></td> <td></td>
+	</tr>
+	<tr> <td>&nbsp;<input type="radio" id="mastercard" name="card type" value="mastercard" checked>
+         <label for="mastercard">Mastercard</label></td> 
+	 <td><label for="card number">Card Number:</label></td> <td><input type="text" maxlength="15" size="15" placeholder="45645"></td> 
+	</tr>
+	<tr> <td>&nbsp;<input type="radio" id="visa" name="card type" value="visa">
+         <label for="visa">Visa</label></td> 
+	 <td><label for="expiry date">Expiry Date:</label></td> <td><input type="text" maxlength="5" size="5" placeholder="03/99"></td> 
+	</tr>
+	<tr> <td>&nbsp;<input type="radio" id="american express" name="card type" value="american express">
+         <label for="american express">American Express</label></td> 
+	 <td></td> <td></td>
+	</tr>
+	<tr> <td>&nbsp;<input type="radio" id="diners club" name="card type" value="diners club">
+         <label for="diners club">Diners Club</label></td> 
+	 <td></td> <td></td>
+	</tr>
+   </table>
+   </div>
+    <br>
+    <br>
+    <br>
+    <div align="left">
+    <table>
+	<tr> <th>Delivery Address:</th><td><textarea name="delivery address" cols="27" rows="5" style="overflow-y: scroll;" placeholder="162 Main Road                              Rondebosch                         Cape Town"></textarea></td>
+	</tr>
+    </table>
+    </div>
+    <br>
+    <br>
+    <div align="left">
+    <input type="submit" value="Send Order" style="height:25px; width:100px">&nbsp;
+    <input type="reset" value="Clear Form" style="height:25px; width:100px">
+    </div>
+   </fieldset>
+ </form>
+ <br><center><a href="main" style="active"><b>Back to Main Page</b></a></center>
+ </body>
+</html>
